@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.drew.takemymeds.HomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addMedFragment"
+            app:destination="@id/addMedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/treatmentFragment"
+        android:name="com.drew.takemymeds.TreatmentFragment"
+        android:label="Treatment"
+        tools:layout="@layout/fragment_treatment" >
+        <action
+            android:id="@+id/action_treatmentFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_treatmentFragment_to_addMedFragment"
+            app:destination="@id/addMedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.drew.takemymeds.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.drew.takemymeds.MoreFragment"
+        android:label="More"
+        tools:layout="@layout/fragment_more" >
+        <action
+            android:id="@+id/action_moreFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMedFragment"
+        android:name="com.drew.takemymeds.AddMedFragment"
+        android:label="Add Medication"
+        tools:layout="@layout/fragment_add_med" >
+        <action
+            android:id="@+id/action_addMedFragment_to_setScheduleFragment"
+            app:destination="@id/setScheduleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setScheduleFragment"
+        android:name="com.drew.takemymeds.SetScheduleFragment"
+        android:label="Set Schedule"
+        tools:layout="@layout/fragment_set_schedule" />
+</navigation>

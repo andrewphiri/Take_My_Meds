@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:title="Home"
+        android:icon="@drawable/home_checked"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/treatmentFragment"
+        android:title="Medications"
+        android:icon="@drawable/medication_selected"
+        android:enabled="true"/>
+
+<!--    <item-->
+<!--        android:id="@+id/placeholder"-->
+<!--        android:title=""-->
+<!--        android:enabled="false"/>-->
+
+    <item
+        android:id="@+id/profileFragment"
+        android:title="Profile"
+        android:icon="@drawable/profile_checked"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/moreFragment"
+        android:title="More"
+        android:icon="@drawable/more_checked"
+        android:enabled="true"/>
+
+</menu>
